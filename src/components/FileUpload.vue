@@ -1,5 +1,5 @@
 <template>
-    <div class="file-upload">
+    <div class="box">
         <h3>File Upload</h3>
         <div
           :class="{'hover-style': !isSelected}"
@@ -10,28 +10,27 @@
                 :accept="acceptType"
                 @change="onFileChange($event.target);"
                 type="file"
-                class="input-file">
+                class="dropbox__file">
 
             <p v-if="!isSelected">
                 Drag your file here to begin<br> or click to browse
             </p>
             <div v-else>
-                <div class="preview">
+                <div class="dropbox__preview">
                     <img
                       v-if="fileUrl"
                       :src="fileUrl"
                       alt="preview">
                 </div>
-                <div class="buttons">
-                    <a
-                      class="button"
-                      @click="reset">cancel
-                    </a>
-                </div>
             </div>
-            <p v-if="warningText">
-                {{warningText}}
-            </p>
+        </div>
+        <div v-if="isSelected">
+            <div class="box__buttons">
+                <a
+                    class="box__button"
+                    @click="reset">cancel
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -89,41 +88,66 @@ export default {
 
 <style scoped>
   .dropbox {
-    background-color: #efefef;
-    cursor: pointer;
-    color: #666;
+    background-color: #fff;
+    margin: 0 auto 20px;
     min-height: 300px;
-    outline: 2px dashed #666;
+    border: 1px solid #92b0b3;
     outline-offset: -10px;
     padding: 10px;
     position: relative;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    width: 450px;
   }
 
-  .hover-style:hover {
-    background-color: #ddd;
-  }
-
-  .input-file {
+  .dropbox.hover-style {
+    background-color: #c8dadf;
     cursor: pointer;
-    height: 300px;
+    outline: 2px dashed #92b0b3;
+  }
+
+  .dropbox.hover-style:hover {
+    background-color: #eee;
+    outline-offset: -20px;
+    outline-color: #c8dadf;
+  }
+
+  .dropbox__file {
+    cursor: pointer;
+    height: 100%;
     opacity: 0;
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
   }
 
   .dropbox p {
     font-size: 1.2em;
-    text-align: center;
     padding: 50px 0;
+    text-align: center;
   }
 
-  .preview {
+  .dropbox__preview {
     margin: 0 auto;
-    padding: 30px 0 0;
+    padding: 0;
   }
 
-  .preview img {
+  .dropbox__preview img {
     height: auto;
-    max-width: 250px;
+    max-width: 100%;
+  }
+
+  .box__button {
+    background-color: #39bfd3;
+    color: #e5edf1;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 40px auto 0;
+    padding: 8px 16px;
+  }
+
+  .box__button:hover,
+  .box__button:focus {
+    background-color: #0f3c4b;
   }
 </style>
