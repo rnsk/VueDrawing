@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <h1>Canvas</h1>
+        <h1>Drawing</h1>
         <ul id="nav">
           <li><router-link to="/">Upload single file</router-link></li>
           <li><router-link to="/multiple">Upload multiple files</router-link></li>
