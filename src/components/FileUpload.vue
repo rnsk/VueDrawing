@@ -135,6 +135,7 @@ export default {
   .dropbox__preview img {
     height: auto;
     max-width: 100%;
+    vertical-align: bottom;
   }
 
   .box__button {
