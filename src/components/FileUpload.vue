@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <h3>File Upload</h3>
+        <h2>Upload single file</h2>
         <div
           :class="{'hover-style': !isSelected}"
           class="dropbox">

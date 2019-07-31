@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2>Drawing apps</h2>
+    <p>アップロードしたファイルにお絵かきできるよ。</p>
   </div>
 </template>
