@@ -26,10 +26,11 @@
         </div>
         <div v-if="isSelected">
             <div class="box__buttons">
-                <a
-                    class="box__button"
+                <button
+                    type="button"
+                    class="btn btn-warning"
                     @click="reset">cancel
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -136,19 +137,5 @@ export default {
     height: auto;
     max-width: 100%;
     vertical-align: bottom;
-  }
-
-  .box__button {
-    background-color: #39bfd3;
-    color: #e5edf1;
-    cursor: pointer;
-    font-weight: 700;
-    margin: 40px auto 0;
-    padding: 8px 16px;
-  }
-
-  .box__button:hover,
-  .box__button:focus {
-    background-color: #0f3c4b;
   }
 </style>
