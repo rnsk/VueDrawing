@@ -69,7 +69,7 @@ export default {
             this.file = null
             this.warningText = ''
         },
-        onFileChange({name, files}) {
+        onFileChange({files}) {
             if (!files.length) return;
 
             this.file = files[0];
