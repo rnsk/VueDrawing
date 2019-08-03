@@ -2,8 +2,8 @@
     <header class="header">
         <h1>Drawing</h1>
         <ul id="nav">
-          <li><router-link to="/">Upload single file</router-link></li>
-          <li><router-link to="/multiple">Upload multiple files</router-link></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/upload">Upload files</router-link></li>
           <li><router-link to="/search">Search</router-link></li>
           <li><router-link to="/about">About</router-link></li>
         </ul>

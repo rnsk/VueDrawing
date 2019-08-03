@@ -12,9 +12,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/multiple',
-      name: 'multiple',
-      component: () => import('./views/Multiple.vue')
+      path: '/upload',
+      name: 'upload',
+      component: () => import('./views/Upload.vue')
     },
     {
       path: '/search',
