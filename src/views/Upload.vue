@@ -1,18 +1,18 @@
 <template>
   <div class="upload">
-    <FileUpload />
+    <SingleFile />
     <MultipleFiles />
   </div>
 </template>
 
 <script>
-import FileUpload from '@/components/FileUpload.vue'
+import SingleFile from '@/components/SingleFile.vue'
 import MultipleFiles from '@/components/MultipleFiles.vue'
 
 export default {
     name: 'upload',
     components: {
-      FileUpload,
+      SingleFile,
       MultipleFiles
     }
 }

@@ -38,7 +38,7 @@
 
 <script>
 export default {
-    name: 'FileUpload',
+    name: 'SingleFile',
     props: {
         acceptType: {
             type: String,
